@@ -5,7 +5,11 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# for CRuby, Rubinius, including Windows and RubyInstaller
+gem "sqlite3", :platform => [:ruby, :mswin, :mingw]
+
+# for JRuby
+gem "jdbc-sqlite3", :platform => :jruby
 gem 'devise'
 
 # Gems used only for assets and not required
